@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sazid.threenumbers.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_number"
+        android:inputType="number"
+        android:hint="First Number"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_number"
+        android:inputType="number"
+        android:layout_below="@id/first_number"
+        android:hint="Second Number"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/third_number"
+        android:inputType="number"
+        android:layout_below="@id/second_number"
+        android:hint="Third Number"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_button"
+        android:text="Submit"
+        android:layout_below="@+id/third_number"
+        />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/input_first_number"
+    android:inputType="number"
+    android:layout_below="@id/submit_button"
+    android:hint="Input First Number To Query"
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/query_button"
+        android:text="Submit"
+        android:layout_below="@+id/input_first_number"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/number_to_be_deleted"
+        android:inputType="number"
+        android:layout_below="@id/query_button"
+        android:hint="Input First Number To Delete"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_button"
+        android:text="Submit"
+        android:layout_below="@+id/number_to_be_deleted"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/delete_button"
+        android:id="@+id/linear"
+        >
+
+        <EditText
+            android:id="@+id/deletable_second_number"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Sec Number"
+            />
+
+        <EditText
+            android:id="@+id/deletable_third_number"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Third Number"
+            />
+
+        <Button
+            android:id="@+id/delete_button_by_second_class"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+    </LinearLayout>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/first_class_text"
+    android:text="FirstClass Total: "
+    android:textSize="20dp"
+    android:layout_below="@+id/linear"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_class_total"
+        android:layout_alignBottom="@+id/first_class_text"
+        android:layout_toRightOf="@+id/first_class_text"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_class_text"
+        android:text="SecondClass Total: "
+        android:textSize="20dp"
+        android:layout_below="@+id/first_class_text"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_class_total"
+        android:layout_alignBottom="@+id/second_class_text"
+        android:layout_toRightOf="@+id/second_class_text"
+        android:textSize="20dp"
+        />
+
+</RelativeLayout>
